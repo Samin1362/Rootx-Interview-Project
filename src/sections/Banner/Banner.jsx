@@ -3,7 +3,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import rootxLogo from "../../assets/images/rootx-logo.png";
 import Silk from "../../components/Silk/Silk";
 
-const Banner = () => {
+const Banner = ({allData}) => {
+  const {name, bio} = allData || {};
   return (
     <section className="max-w-[1240px] mx-auto w-full">
       {/* Navbar */}
@@ -29,15 +30,14 @@ const Banner = () => {
           <div className="flex-1 text-center md:text-left space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
               This is{" "}
-              <span className="underline text-white decoration-white/70">Rootx.</span>
+              <span className="underline text-white decoration-white/70">{name}</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-md mx-auto md:mx-0">
-              We build modern web applications and deliver creative digital
-              solutions tailored to your needs.
+              {bio}
             </p>
             <div className="flex justify-center md:justify-start">
               <button className="bg-white text-[#FF914E] px-6 md:px-8 py-3 md:py-4 rounded-2xl font-semibold shadow-md hover:bg-gray-100 hover:shadow-lg transition-all duration-300">
-                Get Started
+                Download CV
               </button>
             </div>
           </div>

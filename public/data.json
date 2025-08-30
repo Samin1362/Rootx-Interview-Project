@@ -1,0 +1,22 @@
+{
+  "name": "Samin Israk",
+  "title": "Software Engineer",
+  "bio": "Front-end Focused Full-Stack Developer | Machine Learning Enthusiast\nFront-end focused full-stack developer with strong skills in modern UI/UX and hands-on experience in machine learning projects.",
+  "email": "samin.israk@northsouth.edu",
+  "linkedin": "https://www.linkedin.com/in/samin-israk/",
+  "github": "https://www.linkedin.com/in/samin-israk/",
+  "profileImage": {},
+  "skills": ["javascript", "python", "c++", "react", "mongodb"],
+  "projects": [
+    {
+      "projectName": "Portfolio Project",
+      "projectDescription": "using MERN to develop this",
+      "projectLink": "https://www.linkedin.com/in/samin-israk/"
+    },
+    {
+      "projectName": "HTML Project",
+      "projectDescription": "using MERN to develop this",
+      "projectLink": "https://www.linkedin.com/in/samin-israk/"
+    }
+  ]
+}

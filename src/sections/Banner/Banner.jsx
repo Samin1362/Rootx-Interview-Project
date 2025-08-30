@@ -3,12 +3,12 @@ import Navbar from "../../components/Navbar/Navbar";
 import rootxLogo from "../../assets/images/rootx-logo.png";
 import Silk from "../../components/Silk/Silk";
 
-const Banner = ({allData}) => {
+const Banner = ({allData, contactRef}) => {
   const {name, bio} = allData || {};
   return (
     <section className="max-w-[1240px] mx-auto w-full">
       {/* Navbar */}
-      <Navbar />
+      <Navbar contactRef={contactRef}/>
 
       {/* Banner Section */}
 

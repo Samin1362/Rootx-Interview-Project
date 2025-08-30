@@ -2,9 +2,16 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react"; // icons
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ contactRef }) => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleContactClick = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    console.log("contact button is clicked")
+  };
 
   return (
     <nav className="max-w-[1240px] mx-auto bg-[#FF914E] text-white shadow-md rounded">
@@ -17,8 +24,7 @@ const Navbar = () => {
           <li onClick={() => navigate("/form")} className="cursor-pointer hover:text-gray-400">
             Create Portfolio
           </li>
-          <li className="cursor-pointer hover:text-gray-400">About</li>
-          <li className="cursor-pointer hover:text-gray-400">Contact</li>
+          <li onClick={handleContactClick} className="cursor-pointer hover:text-gray-400">Contact</li>
         </ul>
 
         {/* Mobile Menu Button */}

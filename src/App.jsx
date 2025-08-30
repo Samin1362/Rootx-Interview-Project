@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Banner from "./sections/Banner/Banner";
@@ -8,20 +8,21 @@ import ShowData from "./sections/ShowData/ShowData";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import Contact from "./sections/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
 
 function App() {
-  const [allData, setAllData] = useState();
-  const data = JSON.stringify(allData, null, 2);
-  // console.log(data);
+  const [allData, setAllData] = useState([]);
+  const contactRef = useRef(null);
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setAllData(data);
-      })
-      .catch((err) => console.error("Error fetching JSON:", err));
-  }, []);
+    // Only fetch if allData is empty
+    if (allData.length === 0) {
+      fetch("/data.json")
+        .then((res) => res.json())
+        .then((data) => setAllData(data))
+        .catch((err) => console.error("Error fetching JSON:", err));
+    }
+  }, [allData]); // dependency on allData
 
   return (
     <div id="body">
@@ -32,12 +33,13 @@ function App() {
             path="/"
             element={
               <>
-                <Banner allData={allData} />
+                <Banner contactRef={contactRef} allData={allData} />
                 <TechBar />
                 <Skills allData={allData}></Skills>
                 <Projects allData={allData}></Projects>
-                <Contact></Contact>
-                <ShowData data={data}></ShowData>
+                <Contact ref={contactRef} />
+                <Footer></Footer>
+                {/* <ShowData data={data}></ShowData> */}
               </>
             }
           />

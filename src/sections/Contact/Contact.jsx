@@ -12,9 +12,9 @@ const Contact = forwardRef((props, ref) => {
       </div>
 
       {/* Content */}
-      <div className="flex flex-col-reverse md:flex-row items-center gap-6 text-white">
+      <div className="flex flex-col-reverse md:flex-row-reverse items-center gap-6 text-white">
         {/* Form */}
-        <div className="md:w-1/2 bg-[#FF914E] py-10 px-8 flex flex-col gap-8 rounded-lg">
+        <div className="md:w-1/2 w-full bg-[#FF914E] py-10 px-8 flex flex-col gap-8 rounded-lg">
           <div className="flex flex-col">
             <label className="text-[#D9ECFF] mb-2">Your Name</label>
             <input

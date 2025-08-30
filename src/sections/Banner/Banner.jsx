@@ -1,10 +1,9 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import rootxLogo from "../../assets/images/rootx-logo.png";
 import Silk from "../../components/Silk/Silk";
 
 const Banner = ({allData, contactRef}) => {
-  const {name, bio} = allData || {};
+  const {name, bio, profileImage} = allData || {};
   return (
     <section className="max-w-[1240px] mx-auto w-full">
       {/* Navbar */}
@@ -46,7 +45,7 @@ const Banner = ({allData, contactRef}) => {
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="border-2 border-white/50 bg-white/20 backdrop-blur-sm p-4 md:p-6 rounded-2xl shadow-xl">
               <img
-                src={rootxLogo}
+                src={profileImage}
                 alt="Banner Illustration"
                 className="rounded-xl shadow-lg w-[80%] md:w-[300px] lg:w-[350px] mx-auto"
               />

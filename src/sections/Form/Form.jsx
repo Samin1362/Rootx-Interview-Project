@@ -99,7 +99,7 @@ const Form = ({ setAllData }) => {
                     Full Name
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 bg-white text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="name"
                     type="text"
                     name="name"
@@ -116,7 +116,7 @@ const Form = ({ setAllData }) => {
                     Professional Title
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="title"
                     type="text"
                     name="title"
@@ -134,7 +134,7 @@ const Form = ({ setAllData }) => {
                   Biography
                 </label>
                 <textarea
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                  className="shadow appearance-none bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
                   id="bio"
                   name="bio"
                   value={formData.bio}
@@ -156,7 +156,7 @@ const Form = ({ setAllData }) => {
                     Email Address
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none bg-white border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
                     type="email"
                     name="email"
@@ -173,7 +173,7 @@ const Form = ({ setAllData }) => {
                     LinkedIn URL
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="linkedin"
                     type="url"
                     name="linkedin"
@@ -190,7 +190,7 @@ const Form = ({ setAllData }) => {
                     GitHub URL
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="github"
                     type="url"
                     name="github"
@@ -207,7 +207,7 @@ const Form = ({ setAllData }) => {
                     Profile Image URL
                   </label>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="profileImage"
                     type="text"
                     name="profileImage"
@@ -223,7 +223,7 @@ const Form = ({ setAllData }) => {
               <h2 className="text-xl font-semibold mb-4">Skills</h2>
               <div className="flex items-center mb-4">
                 <input
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   type="text"
                   value={newSkill}
                   onChange={(e) => setNewSkill(e.target.value)}
@@ -297,7 +297,7 @@ const Form = ({ setAllData }) => {
                       Project Name
                     </label>
                     <input
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id={`project-name-${index}`}
                       type="text"
                       name="projectName"
@@ -314,7 +314,7 @@ const Form = ({ setAllData }) => {
                       Description
                     </label>
                     <textarea
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"
+                      className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"
                       id={`project-description-${index}`}
                       name="projectDescription"
                       value={project.projectDescription}
@@ -330,7 +330,7 @@ const Form = ({ setAllData }) => {
                       Project Link
                     </label>
                     <input
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className="shadow bg-white appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id={`project-link-${index}`}
                       type="url"
                       name="projectLink"

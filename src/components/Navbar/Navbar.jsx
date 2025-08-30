@@ -17,7 +17,7 @@ const Navbar = ({ contactRef }) => {
     <nav className="max-w-[1240px] mx-auto bg-[#FF914E] text-white shadow-md rounded">
       <div className="max-w-[1240px] mx-auto flex justify-between items-center px-6 py-4">
         {/* Company Name */}
-        <h1 className="text-2xl font-bold">Rootx</h1>
+        <h1 onClick={() => navigate("/")}  className="text-2xl font-bold">Rootx</h1>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg">
@@ -40,9 +40,10 @@ const Navbar = ({ contactRef }) => {
       {isOpen && (
         <div className="md:hidden bg-[#FF914E] px-6 pb-4">
           <ul className="flex flex-col gap-4 text-lg">
-            <li className="cursor-pointer hover:text-gray-400">Portfolio</li>
-            <li className="cursor-pointer hover:text-gray-400">About</li>
-            <li className="cursor-pointer hover:text-gray-400">Contact</li>
+            <li onClick={() => navigate("/form")} className="cursor-pointer hover:text-gray-400">
+            Create Portfolio
+          </li>
+            <li onClick={handleContactClick} className="cursor-pointer hover:text-gray-400">Contact</li>
           </ul>
         </div>
       )}

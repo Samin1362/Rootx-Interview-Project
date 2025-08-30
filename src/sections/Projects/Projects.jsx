@@ -6,7 +6,7 @@ const Projects = ({ allData }) => {
   console.log(projects);
   return (
     <div>
-      <div className="max-w-[1240px] mt-[30px] mx-auto">
+      <div className="max-w-[1240px] mt-[30px] mx-auto p-3">
         {/* skills heading  */}
         <div>
           <h1 className="text-[40px] text-center font-bold text-white bg-[#FF914E] p-2 rounded-lg">
